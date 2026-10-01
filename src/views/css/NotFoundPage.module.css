@@ -1,0 +1,113 @@
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+  --border:#e5e7eb;
+  --primary:#2d6cdf;
+  --primary-hover:#245bc2;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b1220;
+    --card:#0f172a;
+    --muted:#94a3b8;
+    --border:#1f2937;
+    --primary:#3b82f6;
+    --primary-hover:#2563eb;
+  }
+}
+
+.wrap{
+  min-height:100dvh;
+  display:grid;
+  grid-template-rows:1fr auto;
+  place-items:center;
+  background:radial-gradient(1200px 600px at 10% 0%, rgba(45,108,223,.08), transparent 60%),
+             radial-gradient(900px 500px at 90% 20%, rgba(99,102,241,.08), transparent 60%),
+             var(--bg);
+  color:var(--text);
+  padding:24px;
+}
+
+.card{
+  width:min(720px, 92vw);
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:32px 28px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  text-align:center;
+}
+
+.emoji{
+  font-size:48px;
+  line-height:1;
+  margin-bottom:10px;
+}
+
+.title{
+  font-size:56px;
+  font-weight:900;
+  letter-spacing:.5px;
+  margin:0;
+}
+
+.sub{
+  font-size:16px;
+  color:var(--muted);
+  margin:8px 0 16px;
+}
+
+.hint{
+  font-size:14px;
+  color:var(--muted);
+  background:linear-gradient(0deg, #f8fafc, #fff);
+  border:1px dashed var(--border);
+  border-radius:12px;
+  padding:12px 14px;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:18px;
+}
+
+.primary, .secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:40px;
+  padding:0 16px;
+  border-radius:10px;
+  border:1px solid transparent;
+  font-weight:700;
+  text-decoration:none;
+  transition:background-color .15s ease, border-color .15s ease, color .15s ease, transform .02s;
+}
+
+.primary{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+.primary:hover{ background:var(--primary-hover); border-color:var(--primary-hover); }
+.primary:active{ transform:translateY(1px); }
+
+.secondary{
+  background:#f6f7fb;
+  color:var(--text);
+  border-color:var(--border);
+}
+.secondary:hover{ background:#eef0f6; }
+.secondary:active{ transform:translateY(1px); }
+
+.footer{
+  font-size:12px;
+  color:var(--muted);
+  padding:12px 0 0;
+  text-align:center;
+}

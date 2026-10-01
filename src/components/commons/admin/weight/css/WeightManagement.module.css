@@ -1,0 +1,78 @@
+/* src/features/weight/admin/WeightManagement.module.css */
+:root{
+  --card:#fff;
+  --line:#e5e7eb;
+  --muted:#64748b;
+  --bg:#f8fafc;
+  --accent:#22c55e;
+  --danger:#ef4444;
+}
+
+.wrap{ padding:12px; }
+.title{ margin:0 0 12px; font-size:20px; display:flex; align-items:center; gap:8px; }
+.toolbar{
+  display:flex; gap:10px; align-items:center; margin-bottom:12px; flex-wrap:wrap;
+}
+.search{
+  min-width:260px; padding:8px 10px; border:1px solid var(--line); border-radius:8px;
+}
+.chk{ display:flex; align-items:center; gap:6px; font-size:14px; color:var(--muted); }
+.range{ display:flex; gap:6px; align-items:center; color:var(--muted); }
+.range input{ padding:6px 8px; border:1px solid var(--line); border-radius:8px; }
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+.leftCard,.rightCard{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px;
+}
+
+.table{ width:100%; border-collapse:collapse; }
+.table thead th{
+  text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); background:var(--bg);
+}
+.table tbody td{ padding:10px 12px; border-bottom:1px solid var(--line); }
+.empty{ padding:18px; text-align:center; color:var(--muted); }
+
+.userCell{ display:flex; flex-direction:column; }
+.subMeta{ font-size:12px; color:var(--muted); }
+
+.badge{
+  display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px;
+  background:#ecfeff; color:#0369a1; border:1px solid #bae6fd;
+}
+
+.btn{
+  padding:6px 10px; border:1px solid var(--line); background:#fff; border-radius:8px; cursor:pointer;
+}
+.btn:hover{ background:#f9fafb; }
+.btnPrimary{
+  padding:6px 10px; border:1px solid var(--accent); background:var(--accent); color:#fff; border-radius:8px; cursor:pointer;
+}
+.btnDanger{
+  padding:6px 10px; border:1px solid var(--danger); color:var(--danger); background:#fff; border-radius:8px; cursor:pointer;
+}
+.actions{ white-space:nowrap; }
+
+.placeholder{
+  height:220px; display:flex; align-items:center; justify-content:center;
+  color:var(--muted); border:2px dashed var(--line); border-radius:12px;
+}
+
+.detailHeader{
+  display:flex; align-items:flex-end; justify-content:space-between; gap:10px; margin-bottom:8px;
+}
+.detailTitle{ margin:0; }
+.formRow{ display:flex; gap:8px; flex-wrap:wrap; }
+.formRow input{
+  padding:8px 10px; border:1px solid var(--line); border-radius:8px;
+}
+
+@media (max-width:1100px){
+  .grid{ grid-template-columns: 1fr; }
+}

@@ -1,0 +1,89 @@
+/* 컨테이너 & 안내 */
+.container {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.goalBox { margin-bottom: 8px; font-weight: 600; color: #0f172a; }
+.goalBoxMuted { margin-bottom: 8px; color: #64748b; }
+.linkBtn { appearance:none; border:0; background:#2563eb; color:#fff; border-radius:8px; padding:4px 8px; margin-left:6px; cursor:pointer; }
+
+/* 범례 */
+.legend { display:flex; flex-wrap:wrap; gap:8px; margin: 6px 0 10px; }
+.legendItem { display:inline-flex; align-items:center; gap:6px; font-size:12px; color:#374151; background:#f9fafb; border:1px solid #e5e7eb; border-radius:999px; padding:4px 10px; }
+.legendItem i { width:10px; height:10px; border-radius:4px; display:inline-block; }
+.legendBetter i { background:#10b981; }
+.legendSame i { background:#9ca3af; }
+.legendWorse i { background:#ef4444; }
+
+/* react-calendar 루트 – 내부는 :global 한정 */
+.calendar {
+  width: 100%;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  font-family: inherit;
+  line-height: 1.2;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* 네비게이션 */
+.calendar :global(.react-calendar__navigation) {
+  display:flex; align-items:center; justify-content:space-between; gap:8px;
+  padding:8px 10px; background:#f9fafb; border-bottom:1px solid #e5e7eb;
+}
+.calendar :global(.react-calendar__navigation button) {
+  background:none; border:none; color:#374151; font-size:18px; line-height:1;
+  padding:6px 10px; border-radius:8px; cursor:pointer;
+}
+.calendar :global(.react-calendar__navigation button:hover) { background:#eef2ff; }
+.calendar :global(.react-calendar__navigation__label) { flex:1; text-align:center; font-weight:800; font-size:16px; pointer-events:none; }
+
+/* 요일 헤더 */
+.calendar :global(.react-calendar__month-view__weekdays) {
+  background:#fff; padding:6px 0; border-bottom:1px solid #f1f5f9;
+  text-align:center; color:#64748b; font-weight:700;
+}
+.calendar :global(.react-calendar__month-view__weekdays__weekday abbr) { text-decoration:none; }
+
+/* 일자(숫자) 가독성 확보 */
+.calendar :global(.react-calendar__month-view__days__day) { color:#111827; }
+
+/* 타일 */
+.calendar :global(.react-calendar__tile) {
+  position: relative;
+  padding: 10px 6px 28px;
+  border: 1px solid transparent;
+  background: #fff;               /* 기본 흰색으로 고정 */
+  color: inherit;
+  border-radius: 8px;
+}
+.calendar :global(.react-calendar__tile:hover) { background:#f8fafc; }
+.calendar :global(.react-calendar__tile--now) { background:#eff6ff; }
+.calendar :global(.react-calendar__tile--active) { background:#2563eb !important; color:#fff !important; }
+.calendar :global(.react-calendar__tile--active:hover) { background:#1d4ed8 !important; }
+.calendar :global(.react-calendar__month-view__days__day--neighboringMonth) { color:#9ca3af; background:#fff; }
+.calendar :global(.react-calendar__month-view__days__day--weekend) { color:#ef4444; }
+
+/* 내용(하단 중앙) */
+.cellWrap {
+  position:absolute; left:50%; bottom:6px; transform:translateX(-50%);
+  display:flex; align-items:center; gap:6px;
+}
+.weightPill {
+  font-size:11px; font-weight:700; line-height:1;
+  padding:2px 6px; border-radius:999px;
+  color:#1e3a8a; background:#eef2ff; border:1px solid #c7d2fe;
+}
+.trendDot { width:8px; height:8px; border-radius:999px; border:1px solid transparent; }
+.better { background:#10b981; border-color:#86efac; }
+.same { background:#9ca3af; border-color:#e5e7eb; }
+.worse { background:#ef4444; border-color:#fecaca; }
+
+/* 작은 화면 */
+@media (max-width:560px){
+  .calendar :global(.react-calendar__navigation__label){ font-size:15px; }
+  .calendar :global(.react-calendar__tile){ padding:8px 4px 24px; }
+}

@@ -1,0 +1,65 @@
+.card {
+  background: #fff;
+  border: 1px solid #eaecef;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0 0 12px;
+  color: #555;
+  font-size: 14px;
+}
+
+.goal-summary {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.goal-summary strong {
+  color: #111;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.actions button {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.actions button:hover {
+  background: #0c1374;
+}
+
+.actions .ghost {
+  background: #f9fafb;
+  color: #333;
+  border: 1px solid #e5e7eb;
+}
+
+.actions .ghost:hover {
+  background: #f3f4f6;
+}

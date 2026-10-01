@@ -1,0 +1,86 @@
+/* src/features/admin/diet/DietManagement.module.css */
+.wrap { padding: 16px; }
+
+.header {
+  display: flex; justify-content: space-between; gap: 12px; align-items: center;
+  margin-bottom: 12px;
+}
+.filters {
+  display: grid; grid-template-columns: 220px 140px auto auto auto; gap: 8px; align-items: center;
+}
+.input, .select {
+  border: 1px solid #e5e7eb; background: #fff; border-radius: 8px; padding: 8px 10px; font-size: 14px;
+}
+.rangeItem { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #6b7280; }
+.chk { display: flex; gap: 6px; align-items: center; font-size: 12px; color: #374151; }
+
+.grid { display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 12px; }
+.left, .right { min-width: 0; }
+
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; }
+
+.tableWrap { overflow: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th, .table td { border-bottom: 1px solid #f0f2f5; padding: 8px 10px; text-align: left; white-space: nowrap; }
+.table thead th { position: sticky; top: 0; background: #f9fafb; z-index: 1; }
+
+.userCell { display: flex; flex-direction: column; }
+.userName { font-weight: 700; color: #111827; }
+.userSub { color: #6b7280; font-size: 12px; }
+.foodName { max-width: 240px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.btn {
+  border: 1px solid #d1d5db; background: #fff; border-radius: 8px; padding: 6px 10px; font-size: 12px; cursor: pointer;
+}
+.btn:disabled { opacity: .5; cursor: default; }
+
+.btnSm {
+  border: 1px solid #d1d5db; background: #fff; border-radius: 8px; padding: 4px 8px; font-size: 12px; cursor: pointer;
+}
+.danger { border-color: #fca5a5; color: #b91c1c; }
+
+.actions { display: flex; gap: 6px; }
+
+.active { background: #f3f4f6; }
+
+.empty, .emptyPanel { padding: 16px; color: #6b7280; text-align: center; }
+
+.detailHeader { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; }
+.detailTitle { font-weight: 700; color: #111827; }
+.muted { color: #6b7280; font-weight: 400; font-size: 12px; }
+
+.detailKpis { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px; }
+.kpiBox { border: 1px solid #e5e7eb; background: #f9fafb; border-radius: 10px; padding: 8px 10px; text-align: center; }
+.kpiBox span { display: block; font-size: 11px; color: #6b7280; }
+.kpiBox strong { display: block; font-size: 14px; margin-top: 4px; color: #111827; }
+
+.pagination { display: flex; justify-content: center; align-items: center; gap: 8px; padding-top: 8px; }
+.pageInfo { font-size: 12px; color: #374151; }
+
+/* 편집 모달 */
+.modalBackdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.35);
+  display: flex; align-items: center; justify-content: center; z-index: 50;
+}
+.modal {
+  width: min(720px, 96vw); background: #fff; border-radius: 12px; border: 1px solid #e5e7eb;
+  padding: 12px; box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+}
+.modalHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.formGrid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.formGrid label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #374151; }
+.formGrid input {
+  border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px 10px; font-size: 14px; background: #fff;
+}
+.col2 { grid-column: span 2; }
+.modalActions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 10px; }
+
+@media (max-width: 1100px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .filters { grid-template-columns: 1fr 1fr; }
+  .detailKpis { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .formGrid { grid-template-columns: 1fr; }
+  .col2 { grid-column: span 1; }
+}

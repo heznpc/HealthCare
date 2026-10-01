@@ -1,0 +1,117 @@
+.dietShareContainer { padding: 18px; }
+
+/* 폼 */
+.formSection { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 12px; color: #555; }
+
+.selectWrap { position: relative; width: 220px; }
+.selectWrap select{
+  width:100%; padding:10px 12px; border:1px solid #cfd8dc; border-radius:10px;
+  background:linear-gradient(#fff,#fafafa); font-size:14px; color:#263238; outline:none;
+  appearance:none; box-shadow:0 1px 0 rgba(0,0,0,0.02) inset;
+}
+.selectWrap::after{ content:"▾"; position:absolute; right:12px; top:50%; transform:translateY(-50%); color:#607d8b; pointer-events:none; font-size:14px; }
+
+.input{
+  width:180px; padding:10px 12px; border:1px solid #cfd8dc; border-radius:10px;
+  background:#fff; font-size:14px; color:#263238; outline:none;
+}
+.input:focus, .selectWrap select:focus{ border-color:#42a5f5; box-shadow:0 0 0 3px rgba(66,165,245,.18); }
+
+/* 상단 카드 */
+.infoRow{ display:flex; justify-content:center; align-items:stretch; gap:20px; flex-wrap:wrap; margin:12px 0 8px; }
+.card{ background:#fff; border:1px solid #e0e0e0; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,.08); padding:14px; display:flex; flex-direction:column; }
+
+.mealsCard{ width:min(60vw,720px); }
+.topFoods { width:min(28vw,360px); }
+
+.cardHeader{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+
+/* 페이저: 전역 버튼 규칙을 이기도록 높은 특이도와 !important 사용 */
+.pager{ display:flex; gap:8px; align-items:center; }
+.pagerBtn{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:48px; height:30px; padding:6px 12px;
+  border:1px solid #cfd8dc !important; border-radius:8px;
+  background:#fafafa !important; color:#263238 !important; font-weight:600;
+  cursor:pointer; user-select:none; text-decoration:none;
+}
+.pagerBtn:hover{ background:#093057 !important; }
+.pagerBtn:active{ background:#1e61a5 !important; transform:translateY(0.5px); }
+.pagerBtn:disabled{
+  opacity:.55; cursor:default;
+  background:#f3f4f6 !important; color:#9aa4af !important; border-color:#e5e7eb !important;
+}
+.pagerText{ font-weight:600; color:#374151; }
+
+.mealsEmpty{ color:#777; padding:8px 2px; }
+
+.mealsList{ list-style:none; padding:0; margin:0; }
+.mealsItem{
+  display:grid; grid-template-columns:100px 70px 1fr auto 80px 90px;
+  gap:8px; padding:6px 0; border-bottom:1px solid #f2f2f2; font-size:14px;
+}
+.mealsItem:last-child{ border-bottom:none; }
+.mealDate{ color:#444; }
+.mealBadge{ background:#eef6ff; border:1px solid #cfe4ff; color:#1e88e5; font-size:12px; padding:2px 6px; border-radius:999px; text-align:center; }
+.mealName{ font-weight:600; }
+.mealQty{ color:#666; text-align:right; }
+.mealTime{ color:#999; font-size:12px; text-align:center; }
+.mealKcal{ font-weight:700; color:#333; text-align:right; }
+
+/* TOP10 */
+.rankList{ list-style:none; padding:0; margin:6px 0 0; display:grid; gap:6px; }
+.rankList li{
+  display:grid; grid-template-columns:28px 1fr auto; align-items:center;
+  padding:6px 8px; border:1px solid #f0f0f0; border-radius:10px; background:#fcfcfc;
+}
+.rankNo{ width:22px; height:22px; display:inline-grid; place-items:center; background:#42a5f5; color:#fff; border-radius:50%; font-size:12px; font-weight:700; }
+.rankName{ padding:0 8px; }
+.rankCount{ color:#37474f; font-weight:700; }
+
+/* 그래프 */
+.chartRow{ display:flex; justify-content:center; align-items:stretch; gap:20px; flex-wrap:wrap; margin:16px 0 8px; }
+.chartCard{ background:#fff; border:1px solid #e0e0e0; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,.08); padding:14px; display:flex; flex-direction:column; justify-content:space-between; }
+.bar{ width:min(64vw,720px); aspect-ratio:16/9; }
+.pie{ width:min(32vw,420px); aspect-ratio:1/1; }
+
+/* 코멘트 */
+.commentSection{ margin-top:18px; padding:12px; background:#fff; border:1px solid #e0e0e0; border-radius:10px; }
+.commentSection ul{ list-style:none; padding:0; margin:0 0 10px; }
+.commentSection li{ padding:6px 0; border-bottom:1px solid #eee; }
+.commentSection li:last-child{ border-bottom:none; }
+.commentForm{ display:flex; gap:8px; }
+.commentForm input{ flex:1; padding:10px 12px; border:1px solid #cfd8dc; border-radius:10px; background:#fff; }
+.commentForm button{ padding:10px 14px; border:none; border-radius:10px; background:#4caf50; color:#fff; font-weight:700; cursor:pointer; }
+.commentForm button:hover{ background:#43a047; }
+
+/* 반응형 */
+@media (max-width:1024px){
+  .mealsCard{ width:min(68vw,720px); }
+  .topFoods{ width:min(40vw,420px); }
+}
+@media (max-width:800px){
+  .infoRow, .chartRow{ gap:14px; }
+  .mealsCard, .topFoods, .bar, .pie{ width:92vw; }
+  .mealsItem{ grid-template-columns:80px 60px 1fr auto 70px 80px; }
+  .selectWrap{ width:200px; }
+  .input{ width:160px; }
+}
+@media (max-width:540px){
+  .mealsItem{
+    grid-template-columns:90px 1fr auto;
+    grid-template-areas:
+      "date name kcal"
+      "badge name qty"
+      ". time .";
+  }
+  .mealDate{ grid-area:date; }
+  .mealBadge{ grid-area:badge; }
+  .mealName{ grid-area:name; }
+  .mealQty{ grid-area:qty; text-align:left; }
+  .mealTime{ grid-area:time; text-align:left; }
+  .mealKcal{ grid-area:kcal; text-align:right; }
+  .selectWrap, .input{ width:100%; }
+}
+

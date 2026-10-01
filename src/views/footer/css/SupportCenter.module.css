@@ -1,0 +1,131 @@
+/* src/components/support/css/SupportCenter.module.css */
+
+/* ✅ 컴포넌트 범위 변수 (전역 :root 사용 X) */
+.wrap{
+  --bg:#ffffff;
+  --bg2:#ffffff;
+  --card:#ffffff;
+  --line:#e5e7eb;
+  --ink:#111827;
+  --muted:#6b7280;
+  --accent:#2563eb;   /* primary */
+  --accent2:#1d4ed8;  /* primary-600 */
+  --ok:#10b981;
+  --info:#2563eb;
+
+  color:var(--ink);
+  background:var(--bg);          /* 흰색 배경 */
+  min-height:100%;
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  padding:48px 16px 28px;
+  border-bottom:1px solid var(--line);
+  background:var(--bg);
+}
+.heroInner{ max-width:1080px; margin:0 auto; }
+.title{ font-size:28px; font-weight:800; margin:0 0 6px; }
+.subtitle{ margin:0 0 18px; color:var(--muted); }
+
+.search{ display:flex; gap:10px; margin:14px 0 20px; }
+.searchInput{
+  flex:1; padding:12px 14px; border-radius:12px;
+  border:1px solid var(--line); background:#fff; color:var(--ink);
+  outline:none;
+}
+.searchInput:focus{ border-color:#93c5fd; box-shadow:0 0 0 3px #93c5fd55; }
+.searchBtn{
+  padding:12px 16px; border-radius:12px; border:1px solid var(--accent2);
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#fff; font-weight:700; cursor:pointer;
+}
+
+/* Quick links */
+.quickRow{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:10px;
+}
+.quickCard{
+  display:flex; gap:12px; align-items:center; padding:14px; border-radius:14px;
+  background:var(--card); border:1px solid var(--line); text-decoration:none; color:var(--ink);
+  transition:transform .12s, box-shadow .12s, border-color .12s;
+}
+.quickCard:hover{ transform:translateY(-2px); border-color:#c7d2fe; box-shadow:0 8px 20px rgba(2,6,23,.06); }
+.quickIcon{ font-size:20px; }
+.quickTitle{ font-weight:700; }
+.quickDesc{ color:var(--muted); font-size:12px; }
+
+/* Sections */
+.section{ max-width:1080px; margin:32px auto; padding:0 16px; }
+.sectionTitle{
+  font-size:20px; font-weight:800; margin:0 0 12px;
+  border-left:4px solid var(--accent); padding-left:10px;
+}
+.rowBetween{ display:flex; justify-content:space-between; align-items:center; gap:12px; }
+
+.grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px;
+  box-shadow:0 4px 14px rgba(2,6,23,.04);
+}
+.linkList{ margin:8px 0 0; padding:0 0 0 16px; }
+.linkList li{ margin:6px 0; }
+.linkList a{ color:#2563eb; text-decoration:none; }
+.linkList a:hover{ text-decoration:underline; }
+
+.noticeList{ list-style:none; padding:0; margin:6px 0 0; }
+.noticeList li{ padding:10px 12px; border-bottom:1px dashed #e5e7eb; }
+.noticeDot{ display:inline-block; width:8px; height:8px; border-radius:999px; background:var(--accent); margin-right:8px; }
+
+/* FAQ */
+.faq details{
+  background:#fff; border:1px solid var(--line); border-radius:12px;
+  padding:12px 14px; margin-bottom:10px;
+}
+.faq summary{ cursor:pointer; font-weight:700; }
+.faq p{ color:#374151; margin:10px 2px 2px; }
+
+/* Contact */
+.contactIcon{ font-size:22px; }
+.contactTitle{ font-weight:800; margin-top:6px; }
+.contactDesc{ color:var(--muted); margin:6px 0 12px; }
+.btnGhost{
+  display:inline-block; padding:10px 12px; border-radius:10px;
+  border:1px solid #c7d2fe; color:var(--accent); text-decoration:none; background:#fff;
+}
+.btnGhost:hover{ background:#f8fafc; }
+
+/* Badges */
+.badgeOk{
+  background:#ecfdf5; color:#065f46; padding:6px 10px; border-radius:999px; font-size:12px;
+  border:1px solid #a7f3d0;
+}
+.badgeInfo{
+  background:#eff6ff; color:#1e40af; padding:6px 10px; border-radius:999px; font-size:12px;
+  border:1px solid #bfdbfe;
+}
+
+/* Subtle hero pattern on white */
+.patternChevrons{ position:relative; }
+.patternChevrons::before{
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+  background:
+    repeating-linear-gradient(45deg,  rgba(37,99,235,.06) 0 10px, transparent 10px 20px),
+    radial-gradient(900px 220px at -10% -40%, rgba(59,130,246,.08), transparent 60%),
+    radial-gradient(700px 200px at 110% -30%, rgba(37,99,235,.06), transparent 60%);
+  opacity:.6; mix-blend-mode:normal;
+}
+
+/* Responsive */
+@media (max-width:960px){
+  .quickRow{ grid-template-columns:repeat(2,1fr); }
+  .grid4{ grid-template-columns:repeat(2,1fr); }
+  .grid3{ grid-template-columns:repeat(1,1fr); }
+}
+@media (max-width:520px){
+  .search{ flex-direction:column; }
+  .searchBtn{ width:100%; }
+}

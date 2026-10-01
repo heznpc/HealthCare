@@ -1,0 +1,57 @@
+.panel {
+  background:#fff;
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:14px;
+  padding:16px 18px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  min-height:280px;
+}
+
+.header {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  margin-bottom:8px;
+}
+
+.title {
+  margin:0;
+  font-size:16px;
+  font-weight:700;
+  color:#111;
+}
+
+.controls {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.controlItem {
+  display:flex;
+  gap:6px;
+  font-size:12px;
+  color:#374151;
+  align-items:center;
+}
+.controlItem input[type="date"],
+.controlItem select {
+  height:30px;
+  padding:0 8px;
+  border:1px solid #e5e7eb;
+  border-radius:8px;
+  font-size:12px;
+  background:#fff;
+}
+
+.chartWrap { height: 340px; }
+.placeholder {
+  border:2px dashed #e6e6e6;
+  color:#9aa0a6;
+  border-radius:12px;
+  height:260px;
+  display:grid;
+  place-items:center;
+  font-size:14px;
+}

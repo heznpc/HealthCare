@@ -1,0 +1,74 @@
+.dietAnalysisWrap {
+  padding: 24px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  
+}
+
+.tabContainer {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e9ecef;
+}
+
+/* 탭 헤더 스타일 커스터마이징 */
+.tabContainer :global(.tab-header) {
+  background: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+  padding: 0;
+  margin: 0;
+}
+
+.tabContainer :global(.tab-button) {
+  background: transparent;
+  border: none;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #718096;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+  position: relative;
+}
+
+.tabContainer :global(.tab-button:hover) {
+  background: #e9ecef;
+  color: #2d3748;
+}
+
+.tabContainer :global(.tab-button.active) {
+  color: #3b82f6;
+  background: white;
+  border-bottom-color: #3b82f6;
+  font-weight: 600;
+}
+
+.tabContainer :global(.tab-content) {
+  padding: 0;
+  background: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .dietAnalysisWrap {
+    padding: 16px;
+  }
+  
+  .tabContainer :global(.tab-button) {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dietAnalysisWrap {
+    padding: 12px;
+  }
+  
+  .tabContainer :global(.tab-button) {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+}

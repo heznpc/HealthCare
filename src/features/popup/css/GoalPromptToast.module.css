@@ -1,0 +1,89 @@
+/* src/components/css/GoalPromptToast.module.css */
+.wrap{
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  width: min(420px, calc(100vw - 32px));
+  pointer-events: none; /* 바깥 클릭 감지를 위해 container 자체는 이벤트 비활성 */
+}
+
+.card{
+  pointer-events: auto; /* 카드만 클릭 가능 */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 14px 14px 12px;
+  animation: slideUp 160ms ease-out;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.title{
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.close{
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.close:hover{ background: #f1f5f9; }
+
+.message{
+  margin: 6px 0 12px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.actions{
+  display: flex;
+  gap: 8px;
+}
+
+.primary{
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.primary:focus{ outline: 2px solid #93c5fd; outline-offset: 2px; }
+.primary:hover{ filter: brightness(1.05); }
+
+.secondary{
+  appearance: none;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #0f172a;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.secondary:hover{ background: #eef2f7; }
+
+@keyframes slideUp{
+  from{ transform: translateY(8px); opacity: 0; }
+  to{ transform: translateY(0); opacity: 1; }
+}

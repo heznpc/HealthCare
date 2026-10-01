@@ -1,0 +1,42 @@
+/* Tabs 컨테이너 */
+.tabs {
+  display: grid;
+  gap: 15px;
+}
+
+/* 탭 버튼 영역 */
+.tabList {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 10px;
+}
+
+/* 탭 버튼 기본 스타일 */
+.tab {
+  appearance: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* 호버/포커스 */
+.tab:hover,
+.tab:focus-visible {
+  background: #eff6ff;      /* 연한 파란 톤 */
+  outline: none;
+}
+
+/* 활성 탭 */
+.tab.active {
+  background: #dbeafe;
+  border-color: #2563eb66;
+  color: #1e40af;
+  font-weight: 700;
+}
+

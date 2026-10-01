@@ -1,0 +1,84 @@
+/* 변수는 전역이 아닌 컴포넌트 루트에만 정의 */
+.container {
+  --wr-bg:#f7f8fb; --wr-card:#fff; --wr-text:#1f2937; --wr-muted:#6b7280;
+  --wr-border:#e5e7eb; --wr-primary:#2563eb; --wr-primary-hover:#1d4ed8; --wr-ring:rgba(37,99,235,.25);
+
+  max-width:1100px;
+  margin:0 auto;
+  padding:16px 20px 28px;
+  background:var(--wr-bg);
+  border-radius:14px;
+}
+
+.title{ font-size:20px; margin:0 0 12px; color:var(--wr-text); font-weight:700; }
+
+/* 게스트 안내 배너 */
+.guestNotice{
+  display:flex; align-items:center; gap:8px;
+  margin:0 0 12px; padding:10px 12px;
+  background:#f9fbff; border:1px solid var(--wr-border); border-radius:10px;
+  color:var(--wr-text); font-size:13px;
+}
+.guestNotice b{ color:#1f3ed3; }
+.guestNotice a{ color:#214bdb; font-weight:700; text-decoration:none; }
+.guestNotice a:hover{ text-decoration:underline; }
+
+.card, .chartCard, .summaryCard{
+  background:var(--wr-card);
+  border:1px solid var(--wr-border);
+  border-radius:12px;
+  box-shadow:0 6px 16px rgba(17,24,39,.06);
+}
+.card{ padding:16px; }
+
+.formGrid{
+  display:grid;
+  grid-template-columns:minmax(220px,1fr) minmax(180px,1fr) 140px;
+  gap:12px; align-items:end;
+}
+
+.field{ display:flex; flex-direction:column; gap:6px; }
+.label{ font-size:13px; color:var(--wr-muted); }
+.input{
+  height:40px; border:1px solid var(--wr-border); border-radius:10px; padding:0 12px; outline:none;
+}
+.input:focus{ border-color:var(--wr-primary); box-shadow:0 0 0 4px var(--wr-ring); }
+
+.actionField{ display:flex; align-items:end; }
+.btnPrimary{ width:100%; height:40px; border:none; border-radius:10px; background:var(--wr-primary); color:#fff; font-weight:700; cursor:pointer; }
+.btnPrimary:hover{ background:var(--wr-primary-hover); }
+
+.toolbar{ margin-top:14px; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; }
+.btnGroup{ display:inline-flex; gap:8px; }
+.btn{
+  height:34px; padding:0 14px; border:1px solid var(--wr-border); background:#fff; border-radius:8px; color:var(--wr-text); cursor:pointer;
+}
+.btn:hover{ border-color:var(--wr-primary); }
+/* 공용 .active와 충돌 방지 */
+.btnActive{ border-color:var(--wr-primary); color:var(--wr-primary); box-shadow:0 0 0 3px var(--wr-ring); }
+
+.rangeRow{
+  display:grid;
+  grid-template-columns:auto 160px auto 160px;
+  align-items:center; gap:8px;
+}
+.labelSmall{ font-size:12px; color:var(--wr-muted); }
+
+.chartCard{ margin-top:16px; padding:12px; }
+.chartCanvas{ width:100%; height:360px; display:block; border-radius:10px; }
+
+.summaryCard{ margin-top:14px; overflow:hidden; }
+.summaryHeader{ padding:10px 14px; font-weight:700; color:var(--wr-text); border-bottom:1px solid var(--wr-border); }
+.summaryBody{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; padding:12px 14px 16px; }
+.statBox{ background:#fafafa; border:1px solid var(--wr-border); border-radius:10px; padding:10px 12px; }
+.statLabel{ font-size:12px; color:var(--wr-muted); }
+.statValue{ margin-top:4px; font-size:16px; font-weight:700; color:var(--wr-text); }
+
+.singlePointInfo{ margin-top:8px; font-size:14px; color:#374151; }
+.emptyNote{ margin-top:8px; font-size:13px; color:#6b7280; }
+
+@media (max-width:860px){
+  .formGrid{ grid-template-columns:1fr; }
+  .rangeRow{ grid-template-columns:1fr 1fr; }
+  .btnPrimary{ height:44px; }
+}

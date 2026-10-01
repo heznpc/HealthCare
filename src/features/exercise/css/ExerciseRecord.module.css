@@ -1,0 +1,110 @@
+/* src/features/exercise/css/ExerciseRecord.module.css */
+
+.wrap { padding: 16px; }
+.title { font-size: 20px; font-weight: 800; margin: 0 0 12px; }
+
+/* 게스트 안내 배너 */
+.guestNotice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  background: #f9fbff;
+  border: 1px solid #e3e5ef;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #2c2c34;
+}
+.guestNotice b { color: #1f3ed3; }
+.guestNotice a { color: #214bdb; font-weight: 700; text-decoration: none; }
+.guestNotice a:hover { text-decoration: underline; }
+
+.topRow { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 16px; align-items: start; }
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e7e7e9;
+  border-radius: 12px;
+  padding: 12px;
+}
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font-size: 12px; color: #555; }
+.input {
+  height: 36px;
+  padding: 6px 10px;
+  border: 1px solid #d6d6da;
+  border-radius: 8px;
+  outline: none;
+}
+.input:focus { border-color: #7a8cff; box-shadow: 0 0 0 2px rgba(122,140,255,0.15); }
+
+.kcalRow { display: flex; align-items: center; gap: 8px; }
+.aiBadge {
+  font-size: 11px; padding: 3px 6px; border-radius: 6px;
+  background: #f2f3ff; color: #4c55ff; border: 1px solid #dedeff;
+}
+
+.addBtn {
+  grid-column: 1 / -1;
+  height: 40px; border: 0; border-radius: 10px;
+  background: #2d6cdf; color: #fff; font-weight: 700;
+  cursor: pointer;
+}
+
+.imageWrap {
+  background: #fff; border: 1px solid #e7e7e9; border-radius: 12px;
+  padding: 12px; display: flex; flex-direction: column; gap: 10px;
+}
+.previewImage { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 10px; border: 1px solid #e5e5ea; }
+.noImage {
+  width: 100%; aspect-ratio: 16/10; border-radius: 10px; border: 1px dashed #c8c8cf;
+  display: grid; place-items: center; color: #8a8a95; font-size: 14px; background: #fafafa;
+}
+
+/* 수동/자동 전환 및 입력 */
+.imgControls { display: flex; flex-direction: column; gap: 8px; }
+.imgControlsTight { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.imgModeRow { display: flex; gap: 12px; align-items: center; }
+.radio { display: flex; gap: 6px; align-items: center; font-size: 13px; color: #444; }
+.urlRow { display: flex; gap: 8px; align-items: center; }
+.fileRow input[type="file"] { font-size: 12px; }
+.rowGap { display: flex; gap: 8px; }
+.smallBtn, .smallBtnSecondary {
+  height: 32px; padding: 0 10px; border-radius: 8px; cursor: pointer; font-weight: 600; border: 1px solid transparent;
+}
+.smallBtn { background: #2d6cdf; color: #fff; }
+.smallBtnSecondary { background: #f6f7fb; color: #2c2c34; border-color: #e3e5ef; }
+.helper { font-size: 11px; color: #777; }
+
+.tableCard {
+  margin-top: 16px; background: #fff; border: 1px solid #e7e7e9; border-radius: 12px; overflow: hidden;
+}
+.table { width: 100%; border-collapse: collapse; }
+.table thead th {
+  background: #f7f7fb; font-size: 13px; color: #555;
+  padding: 10px; text-align: left; border-bottom: 1px solid #eee;
+}
+.table tbody td { padding: 10px; border-bottom: 1px solid #f1f1f4; vertical-align: top; }
+.empty { text-align: center; color: #888; padding: 20px; }
+
+.editRow { background: #fcfdff; }
+.thumb { width: 84px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid #ececf2; }
+.noImgText { font-size: 12px; color: #999; }
+
+.actions { display: flex; gap: 6px; align-items: center; }
+.editBtn, .delBtn, .saveBtn, .cancelBtn {
+  height: 32px; padding: 0 10px; border-radius: 8px; border: 1px solid transparent; cursor: pointer; font-weight: 600;
+}
+.editBtn { background: #f2f6ff; color: #214bdb; border-color: #dfe6ff; }
+.editBtn:hover { background: #214bdb; color: #fff; border-color: #214bdb; }
+.delBtn { background: #fff3f3; color: #d92b2b; border-color: #ffdede; }
+.delBtn:hover { background: #d92b2b; color: #fff; border-color: #d92b2b; }
+.saveBtn { background: #eafaf0; color: #1b7a3a; border-color: #cdeed9; }
+.saveBtn:hover { background: #1b7a3a; color: #fff; border-color: #1b7a3a; }
+.cancelBtn { background: #f6f7fb; color: #2c2c34; border-color: #e3e5ef; }
+.cancelBtn:hover { background: #2c2c34; color: #fff; border-color: #2c2c34; }
+
+.err { margin: 6px 0 0; font-size: 12px; color: #d32f2f; }

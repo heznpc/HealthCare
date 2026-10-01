@@ -1,0 +1,73 @@
+/* src/pages/css/CompanyAbout.module.css */
+
+/* ✅ 전역 :root 제거. 변수는 .wrap 범위에서만 유효 */
+.wrap{
+  --primary:#2563eb;
+  --primary-600:#1d4ed8;
+  --ring:#93c5fd;
+  --text:#111827;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --bg:#ffffff;
+  --card:#ffffff;
+
+  max-width:1040px;
+  margin:24px auto 48px;
+  padding:0 20px;
+  color:var(--text);
+  background:var(--bg);
+}
+
+/* Hero */
+.hero{ text-align:center; padding:28px 0 12px; }
+.logo{ width:56px; height:56px; object-fit:contain; }
+.title{ margin:8px 0 4px; font-size:28px; font-weight:800; }
+.subtitle{ margin:0; color:var(--muted); }
+
+/* Section */
+.section{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  margin-top:18px;
+  box-shadow:0 4px 16px rgba(0,0,0,.04);
+}
+.h2{
+  margin:0 0 10px; font-size:18px; font-weight:800;
+  border-left:4px solid var(--primary); padding-left:10px;
+}
+.lead{ margin:6px 0 12px; line-height:1.6; }
+
+/* Stats */
+.stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; }
+.statCard{ border:1px solid var(--line); border-radius:12px; padding:14px; text-align:center; }
+.statNum{ font-size:22px; font-weight:800; color:var(--primary); }
+.statLabel{ color:var(--muted); font-size:14px; }
+
+/* Values */
+.values{ margin:6px 0 0; padding-left:18px; line-height:1.8; }
+
+/* Team */
+.teamGrid{ display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); }
+.card{
+  display:flex; gap:12px; align-items:center;
+  border:1px solid var(--line); border-radius:12px; padding:12px; background:#fff;
+}
+.avatar{
+  width:48px; height:48px; border-radius:9999px;
+  display:grid; place-items:center; font-weight:800; color:#fff;
+  background:linear-gradient(135deg,var(--primary),var(--primary-600));
+}
+.cardBody{ display:flex; flex-direction:column; }
+.cardName{ font-weight:700; }
+.cardRole{ color:var(--muted); font-size:14px; }
+
+/* Timeline */
+.timeline{ display:flex; flex-direction:column; gap:10px; }
+.ti{ display:flex; align-items:center; gap:10px; }
+.dot{ width:10px; height:10px; border-radius:50%; background:var(--primary); flex:0 0 auto; }
+
+/* Links */
+.note a{ color:var(--primary); text-decoration:none; }
+.note a:hover{ text-decoration:underline; }

@@ -1,0 +1,118 @@
+/* src/features/diet/css/DietRecord.module.css */
+
+.dietRecordContainer {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  color: #111827;
+  box-sizing: border-box;
+}
+
+.dietLeftPanel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb !important;
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff !important;
+}
+
+.dietRightPanel {
+  flex: 1;
+  border: 1px solid #e5e7eb !important;
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff !important;
+  min-width: 300px;
+}
+
+/* 안내 */
+.guestNotice {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #334155;
+  margin-bottom: 10px;
+}
+.guestNotice a { color: #2563eb; text-decoration: none; }
+.guestNotice a:hover { text-decoration: underline; }
+
+/* 날짜 입력 행 */
+.formSection {
+  margin: 8px 0 4px;
+  color: #111827;
+}
+
+/* 탭 */
+.mealTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.tab {
+  /* 전역 버튼 스타일 충돌 방지용 강제 지정 */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 34px !important;
+  padding: 8px 12px !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #cbd5e1 !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  transition: background .12s, color .12s, border-color .12s, transform .06s !important;
+}
+
+.tab:hover {
+  background: #f8fafc !important;
+  border-color: #94a3b8 !important;
+}
+
+.tab:focus-visible {
+  outline: 3px solid #dbeafe !important;
+  outline-offset: 2px !important;
+}
+
+/* 활성 탭 */
+.active,
+.tab.active {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #1d4ed8 !important;
+}
+
+/* 추가 버튼 */
+.add,
+.tab.add {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #15803d !important;
+}
+.tab.add:hover {
+  background: #15803d !important;
+  border-color: #166534 !important;
+}
+
+/* 기록 리스트 */
+.recordedFoods ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.recordedFoods li {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #111827;
+}

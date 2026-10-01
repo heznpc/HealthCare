@@ -1,0 +1,68 @@
+.wrap{
+  max-width:1040px;
+  margin:24px auto 48px;
+  padding:0 20px;
+  color:#111827;
+  background:#fff;
+}
+
+/* Hero */
+.hero{ padding:24px 0 8px; }
+.title{ margin:0 0 6px; font-size:28px; font-weight:800; }
+.subtitle{ margin:0; color:#6b7280; }
+
+/* TOC */
+.toc{
+  margin:12px 0 0;
+  padding-left:18px;
+  line-height:1.9;
+}
+.toc a{
+  color:#2563eb;
+  text-decoration:none;
+}
+.toc a:hover{ text-decoration:underline; }
+
+/* Section */
+.section{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  padding:18px;
+  margin-top:18px;
+  box-shadow:0 4px 14px rgba(2,6,23,.04);
+}
+.h2{
+  margin:0 0 10px;
+  font-size:18px;
+  font-weight:800;
+  border-left:4px solid #2563eb;
+  padding-left:10px;
+}
+.p{ margin:6px 0 0; line-height:1.75; color:#374151; }
+.list{ margin:6px 0 0; padding-left:18px; line-height:1.8; }
+
+/* Details */
+.item{
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px 12px;
+  margin-bottom:10px;
+  background:#fff;
+}
+.summary{
+  cursor:pointer;
+  font-weight:700;
+  list-style:none;
+}
+.item[open] .summary{ color:#1d4ed8; }
+.answer{ margin-top:8px; color:#374151; line-height:1.7; }
+
+/* Misc */
+.link{ color:#2563eb; text-decoration:none; }
+.link:hover{ text-decoration:underline; }
+.note{
+  margin-top:10px;
+  color:#6b7280;
+  font-size:13px;
+}

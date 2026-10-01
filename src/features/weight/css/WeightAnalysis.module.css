@@ -1,0 +1,118 @@
+/* src/features/weight/css/WeightAnalysis.module.css */
+
+.container {
+  background: #fff;
+  border: 1px solid #eaecef;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.controls label {
+  font-size: 12px;
+  color: #555;
+  font-weight: 600;
+}
+
+.controls input[type="date"] {
+  height: 20px;
+  padding: 6px 10px;
+  border: 1px solid #d6d6da;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #2c2c34;
+  font-size: 14px;
+}
+
+.controls input[type="date"]:focus {
+  border-color: #7a8cff;
+  box-shadow: 0 0 0 2px rgba(122,140,255,0.15);
+}
+
+.empty {
+  color: #6b7280;
+  padding: 12px 0;
+  text-align: center;
+}
+
+/* KPI 카드 */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.kpi {
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.kLabel {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.kVal {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* 안내 문구 */
+.note {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+/* 차트: 컴팩트 높이 */
+.chartCardSmall {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px;
+  background: #fff;
+  height: 320px;               /* 한눈에 보이도록 축소 */
+  margin-bottom: 16px;
+}
+.chartCardSmall canvas {
+  height: 100% !important;     /* 부모 높이 채움 */
+}
+
+/* 섹션 소제목 */
+.subTitle {
+  margin: 16px 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .header { flex-direction: column; align-items: stretch; gap: 8px; }
+  .controls { grid-template-columns: 1fr 1fr; }
+  .chartCardSmall { height: 260px; }
+}

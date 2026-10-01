@@ -1,0 +1,48 @@
+.diet-ranking-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.diet-ranking-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.diet-ranking-empty {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+}
+
+.diet-ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.diet-ranking-table th,
+.diet-ranking-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.diet-ranking-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.diet-ranking-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.diet-ranking-table tr:hover {
+  background-color: #f0f8ff;
+}

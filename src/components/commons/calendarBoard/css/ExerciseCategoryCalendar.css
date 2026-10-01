@@ -1,0 +1,129 @@
+.exercise-category-calendar-container {
+  padding: 12px;
+}
+
+.exercise-category-calendar-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exercise-category-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;    /* 줄바꿈 + 간격 */
+  margin-bottom: 10px;
+}
+
+.exercise-category-legend .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  font-size: 13px;
+  line-height: 1.6;
+  background: #f9fafb;
+}
+
+.exercise-category-legend .legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.exercise-category-calendar-component {
+  width: 100%;
+}
+
+/* 날짜 셀 내부 점 컨테이너 */
+.exercise-category-calendar-dots {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 8px;
+  gap: 4px;
+  justify-content: start;
+  margin-top: 2px;
+  min-height: 10px;
+}
+
+/* 날짜 셀 점 */
+.exercise-category-calendar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+}
+
+/* src/comp/CalendarBoard/css/ExerciseCategoryCalendar.css */
+
+.exercise-category-calendar-container{
+  background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+.exercise-category-calendar-title{margin:0 0 12px;font-size:18px;font-weight:700;color:#111827}
+
+/* Legend */
+.exercise-category-legend{
+  display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px
+}
+.exercise-category-legend .legend-item{
+  display:inline-flex;align-items:center;gap:6px;
+  border:1px solid #e5e7eb;border-radius:999px;padding:4px 10px;
+  font-size:12px;color:#374151;background:#f9fafb
+}
+.exercise-category-legend .legend-dot{
+  width:10px;height:10px;border-radius:999px;border:1px solid rgba(0,0,0,.08);display:inline-block
+}
+
+/* Calendar scope */
+.exercise-category-calendar-component.react-calendar{
+  width:100%;border:1px solid #eef2f7;border-radius:12px;
+  font-family:inherit;line-height:1.2;overflow:hidden
+}
+.exercise-category-calendar-component .react-calendar__navigation{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:8px 10px;background:#f9fafb;border-bottom:1px solid #e5e7eb
+}
+.exercise-category-calendar-component .react-calendar__navigation button{
+  background:none;border:none;color:#374151;font-size:18px;line-height:1;
+  padding:6px 10px;border-radius:8px;cursor:pointer
+}
+.exercise-category-calendar-component .react-calendar__navigation button:hover{background:#eef2ff}
+.exercise-category-calendar-component .react-calendar__navigation__label{
+  flex:1;text-align:center;font-weight:800;font-size:16px;pointer-events:none
+}
+
+.exercise-category-calendar-component .react-calendar__month-view__weekdays{
+  background:#fff;padding:6px 0;border-bottom:1px solid #f1f5f9;
+  text-align:center;color:#64748b;font-weight:700
+}
+.exercise-category-calendar-component .react-calendar__month-view__weekdays__weekday abbr{text-decoration:none}
+
+.exercise-category-calendar-component .react-calendar__tile{
+  padding:10px 6px 24px;position:relative;border:1px solid transparent
+}
+.exercise-category-calendar-component .react-calendar__tile:hover{background:#f8fafc}
+.exercise-category-calendar-component .react-calendar__tile--now{background:#eff6ff;border-radius:8px}
+.exercise-category-calendar-component .react-calendar__tile--active{background:#2563eb;color:#fff;border-radius:8px}
+.exercise-category-calendar-component .react-calendar__tile--active:hover{background:#1d4ed8}
+.exercise-category-calendar-component .react-calendar__month-view__days__day--neighboringMonth{color:#9ca3af}
+.exercise-category-calendar-component .react-calendar__month-view__days__day--weekend{color:#ef4444}
+
+/* dots in day cell */
+.exercise-category-calendar-dots{
+  display:flex;gap:6px;position:absolute;left:50%;bottom:6px;transform:translateX(-50%)
+}
+.exercise-category-calendar-dot{
+  width:8px;height:8px;border-radius:999px;border:1px solid rgba(0,0,0,.08)
+}
+
+@media (max-width:560px){
+  .exercise-category-calendar-component .react-calendar__navigation__label{font-size:15px}
+  .exercise-category-calendar-component .react-calendar__tile{padding:8px 4px 20px}
+  .exercise-category-calendar-dots{gap:4px;bottom:4px}
+}

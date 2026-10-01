@@ -1,0 +1,189 @@
+.dailyTabWrap {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.dateSelector {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dateLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin: 0;
+}
+
+.dateInput {
+  padding: 8px 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #2d3748;
+  background: white;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.dateInput:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.dateInput:hover {
+  border-color: #3b82f6;
+}
+
+.weekRange {
+  font-size: 0.9rem;
+  color: #3b82f6;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.statCard.success {
+  border-left: 4px solid #3b82f6;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+.statNumber.success {
+  color: #3b82f6;
+}
+
+.statNumber.primary {
+  color: #3182ce;
+}
+
+.statLabel {
+  font-size: 0.95rem;
+  color: #718096;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.statChange {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.statChange.positive {
+  color: #3b82f6;
+}
+
+.statChange.negative {
+  color: #e53e3e;
+}
+
+.statChange.neutral {
+  color: #718096;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.chartSection {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e9ecef;
+}
+
+.chartTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.chartContainer {
+  position: relative;
+  min-height: 300px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .chartsGrid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .chartsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .statCard {
+    padding: 20px;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+  
+  .dailyTabWrap {
+    padding: 16px;
+  }
+  
+  .chartSection {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statNumber {
+    font-size: 1.8rem;
+  }
+  
+  .chartTitle {
+    font-size: 1.1rem;
+  }
+}

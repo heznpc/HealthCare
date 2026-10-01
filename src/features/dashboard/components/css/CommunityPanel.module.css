@@ -1,0 +1,389 @@
+/* 헬스케어 앱과 통일된 방명록 스타일 */
+
+.panel {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 헤더 영역 */
+.header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.searchMini {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 12px;
+  width: 120px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #374151;
+}
+
+.searchInput::placeholder {
+  color: #9ca3af;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: white;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.searchBtnMini {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.searchBtnMini:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: white;
+}
+
+/* 검색 결과 표시 */
+.searchResult {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  margin: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.foundUser {
+  color: #0369a1;
+  font-weight: 500;
+}
+
+.clearBtn {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #3b82f6;
+  border-radius: 6px;
+  color: #3b82f6;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clearBtn:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+/* 컨텐츠 영역 */
+.contentArea {
+  padding: 20px;
+}
+
+/* 방명록 리스트 */
+.guestbookList {
+  margin-bottom: 24px;
+}
+
+.guestbookItem {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.guestbookItem:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.itemHeader {
+  background: #f9fafb;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.authorInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.authorName {
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dateInfo {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.messageContent {
+  padding: 16px;
+  line-height: 1.5;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* 댓글 섹션 */
+.commentsSection {
+  border-top: 1px solid #f3f4f6;
+  background: #f9fafb;
+}
+
+.commentsHeader {
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.commentsList {
+  padding: 12px 16px;
+}
+
+.commentItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: white;
+  border-radius: 6px;
+  border-left: 3px solid #3b82f6;
+}
+
+.commentAuthor {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.commentText {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.commentDate {
+  font-size: 11px;
+  color: #9ca3af;
+  align-self: flex-end;
+}
+
+/* 댓글 작성 */
+.replySection {
+  padding: 12px 16px;
+  background: #f9fafb;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.replyInput {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  background: white;
+}
+
+.replyInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.replyBtn {
+  padding: 8px 12px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.replyBtn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.replyBtn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* 빈 상태 */
+.emptyState {
+  text-align: center;
+  padding: 48px 24px;
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.emptyIcon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.emptyText {
+  color: #374151;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.emptySubText {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.pageBtn {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 36px;
+}
+
+.pageBtn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.pageActive {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.pageActive:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* 작성 섹션 */
+.writeSection {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.writeHeader {
+  background: #f9fafb;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.writeBox {
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.writeInput {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fefefe;
+}
+
+.writeInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.writeBtn {
+  padding: 10px 20px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.writeBtn:hover {
+  background: #2563eb;
+}
+
+/* 게스트 메시지 */
+.guestMessage {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.guestMessage .muted {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+  padding: 24px;
+  background: #f9fafb;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+}

@@ -1,0 +1,153 @@
+/* Layout */
+.gswOverlay{
+  position:fixed; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(0,0,0,.45);
+  padding:24px;
+  z-index:1200;
+}
+.gswModal{
+  width:760px; max-width:92vw;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  box-shadow:0 20px 60px rgba(2,6,23,.12);
+  overflow:hidden;
+}
+
+/* Header */
+.gswHeader{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 18px; border-bottom:1px solid #eef2f7;
+}
+.gswH3{ margin:0; font-size:18px; font-weight:800; color:#111827; }
+.gswIcon{
+  appearance:none; border:0; background:#f1f5f9; color:#334155;
+  width:32px; height:32px; border-radius:8px; cursor:pointer;
+}
+.gswIcon:hover{ background:#e2e8f0; }
+
+/* Body */
+.gswBody{ padding:18px; color:#111827; }
+
+/* Steps */
+.gswSteps{ display:flex; gap:8px; margin:0 0 10px; }
+.gswStep{
+  padding:6px 10px; border-radius:999px; font-weight:700; font-size:12px;
+  background:#f1f5f9; color:#475569; border:1px solid #e2e8f0;
+}
+.gswStepActive{ background:#2563eb; color:#fff; border-color:#1d4ed8; }
+
+/* Typography */
+.gswH4{ margin:6px 0 10px; font-size:16px; font-weight:800; }
+.gswH5{ margin:0 0 6px; font-size:14px; font-weight:800; }
+
+/* Lists / rows */
+.gswList{ margin:8px 0 0; padding-left:18px; }
+.gswRow{ display:flex; align-items:center; gap:10px; }
+.gswCode{ background:#f1f5f9; color:#334155; padding:2px 6px; border-radius:6px; }
+
+/* Grid */
+.gswGrid2{
+  display:grid; gap:12px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:start;
+}
+.gswGrid2 > div {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+@media (max-width:700px){ 
+  .gswGrid2{ 
+    grid-template-columns:1fr; 
+    gap:24px;
+  } 
+}
+
+/* Form */
+.gswLabel{ display:block; margin:12px 0 6px; color:#374151; font-weight:600; }
+.gswInput{
+  width:300px; padding:10px 12px; border-radius:10px;
+  border:1px solid #d1d5db; background:#fff; color:#111827;
+  outline:none; transition:border-color .12s, box-shadow .12s;
+}
+.gswInput:focus{ border-color:#2563eb; box-shadow:0 0 0 3px #dbeafe; }
+
+.gswRange{ width:100%; margin:8px 0 6px; }
+
+/* Calc boxes */
+.gswCalcBox{
+  width:300px; margin-top:30px; padding:10px 12px; border-radius:10px;
+  background:#f8fafc; border:1px solid #e5e7eb; color:#1f2937;
+}
+.gswCalcGrid{
+  display:grid; gap:10px; margin-top:10px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.gswItem{
+  border:1px solid #e5e7eb; border-radius:12px; padding:12px;
+  background:#fff;
+}
+@media (max-width:700px){ .gswCalcGrid{ grid-template-columns:1fr; } }
+
+.gswSpaceBetween{ justify-content:space-between; width:100%; }
+.gswTip{ margin-top:8px; font-size:12px; color:#6b7280; }
+.gswUserMeta{ margin-top:8px; color:#6b7280; }
+
+/* Diet style pills */
+.gswPillGroup{ display:flex; gap:10px; flex-wrap:wrap; }
+
+.gswPill{
+  appearance:none;
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:68px; padding:10px 14px; line-height:1;
+  border-radius:9999px;
+  background:#fff;
+  border:2px solid #cbd5e1;
+  color:#111827; font-weight:700;
+  cursor:pointer;
+  transition:transform .06s, box-shadow .12s, border-color .12s, background .12s, color .12s;
+}
+.gswPill:hover{ background:#2563eb; border-color:#94a3b8; color: #fff; }
+.gswPill:focus-visible{ outline:none; box-shadow:0 0 0 3px #dbeafe; }
+
+.gswPillActive{
+  position:relative;
+  background:#2563eb;
+  border-color:#1d4ed8;
+  color:#fff;
+  box-shadow:0 0 0 4px #dbeafe;
+  transform:translateY(-1px);
+}
+.gswPillActive::before{
+  content:"✓";
+  font-weight:800;
+  margin-right:6px;
+}
+
+/* Description & summary */
+.gswDesc{ margin:8px 0 10px; color:#6b7280; }
+.gswSummary{
+  margin-top:12px; padding:12px; border:1px solid #e5e7eb;
+  border-radius:12px; background:#fff;
+}
+
+/* Footer */
+.gswFooter{
+  display:flex; align-items:center; gap:8px;
+  padding:14px 18px; border-top:1px solid #eef2f7;
+}
+.gswGhost{
+  appearance:none; border:1px solid #cbd5e1; background:#fff; color:#111827;
+  padding:10px 14px; border-radius:10px; cursor:pointer;
+}
+.gswGhost:hover{ background:#f8fafc; }
+
+.gswPrimary{
+  margin-left:auto;
+  appearance:none; border:1px solid #1d4ed8; background:#2563eb; color:#fff;
+  padding:10px 16px; border-radius:10px; cursor:pointer; font-weight:700;
+}
+.gswPrimary:disabled{ opacity:.5; cursor:not-allowed; }
+.gswPrimary:hover:not(:disabled){ background:#1d4ed8; }

@@ -1,0 +1,14 @@
+.dialog { width: min(440px, calc(100vw - 32px)); box-sizing: border-box; border: 0; border-radius: 16px; padding: 24px; color: #1e293b; background: #fff; box-shadow: 0 20px 60px #0003; }
+.dialog::backdrop { background: #0f172a80; }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.header h2 { margin: 0; font-size: 19px; line-height: 1.5; }
+.close { background: transparent; border: 0; color: #64748b; font-size: 26px; cursor: pointer; padding: 0 4px; }
+.message { margin: 20px 0 24px; line-height: 1.7; white-space: pre-wrap; color: #475569; }
+.actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+.primary, .secondary { border-radius: 8px; padding: 10px 16px; font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; }
+.primary { border: 1px solid #16a34a; background: #16a34a; color: #fff; }
+.secondary { border: 1px solid #e2e8f0; background: #fff; color: #475569; }
+.dialog button:focus-visible, .dialog a:focus-visible { outline: 3px solid #86efac; outline-offset: 3px; }
+
+.input { width: 100%; box-sizing: border-box; padding: 10px 12px; margin-bottom: 20px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; }
+.input:focus { outline: 2px solid #86efac; outline-offset: 2px; }

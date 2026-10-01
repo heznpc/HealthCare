@@ -1,0 +1,107 @@
+/* src/components/css/Wrap.css */
+/* 모든 스타일을 .app-wrap 범위로 네임스페이스 처리 */
+
+/* 컨테이너 */
+.app-wrap { padding: 16px; }
+
+/* 공통 카드/패널 */
+.app-wrap .card,
+.app-wrap .panel {
+  background:#fff; border-radius:16px; padding:16px;
+  box-shadow:0 1px 0 rgba(0,0,0,.04), 0 8px 20px rgba(0,0,0,.08);
+}
+
+/* Row1: 3열 그리드 */
+.app-wrap .top-grid{
+  display:grid; gap:16px;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  margin-bottom:16px;
+}
+
+/* Row2: 2열 (좌 2 : 우 1 비율) */
+.app-wrap .bottom-grid{
+  display:grid; gap:16px;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* 반응형 */
+@media (max-width: 960px){
+  .app-wrap .top-grid{ grid-template-columns: 1fr; }
+  .app-wrap .bottom-grid{ grid-template-columns: 1fr; }
+}
+
+/* 목표 카드 */
+.app-wrap .actions{ display:flex; gap:8px; margin-top:10px; }
+.app-wrap button{
+  padding:8px 12px; border-radius:10px; border:none; cursor:pointer;
+  background:#0ea5e9; color:#fff; font-weight:600;
+}
+.app-wrap button.ghost{ background:#eef2f7; color:#1f2937; }
+
+/* 오늘 요약 KPI */
+.app-wrap .kpis{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:8px;
+  list-style:none; padding:0; margin:8px 0 0;
+}
+.app-wrap .kpis li{
+  background:linear-gradient(180deg,#f8fafc,#ffffff);
+  border:1px solid #eef2f7; border-radius:12px; padding:10px; text-align:center;
+}
+.app-wrap .kpis strong{ display:block; font-size:20px; font-weight:800; }
+.app-wrap .kpis span{ font-size:12px; opacity:.75; }
+
+/* 빠른 추가 */
+.app-wrap .grid-quick{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.app-wrap .grid-quick button{ width:100%; }
+
+/* 분석 패널 */
+.app-wrap .chart-placeholder{
+  height:260px; border:2px dashed #e5e7eb; border-radius:12px;
+  display:flex; align-items:center; justify-content:center; color:#94a3b8;
+}
+
+/* 커뮤니티 패널 */
+.app-wrap .feed{ list-style:none; padding:0; margin:10px 0; }
+.app-wrap .feed li{ padding:8px 0; border-bottom:1px solid #f1f5f9; }
+.app-wrap .feed li:last-child{ border-bottom:none; }
+
+
+/* 목표 설정 알림 전용 스타일 */
+.goal-alert-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.goal-alert-box {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.goal-alert-box p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #333;
+}
+
+.goal-alert-box button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.goal-alert-box button:hover {
+  background: #0056b3;
+}

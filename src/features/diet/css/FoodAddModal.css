@@ -1,0 +1,128 @@
+/* src/css/Dietmanagement/FoodAddModal.css */
+/* ===== FoodAddModal scoped styles (FINAL) ===== */
+
+.foodadd-modal.modal-backdrop{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.45);
+  z-index: 1000;
+  animation: fam-fade .15s ease-out;
+}
+
+.foodadd-modal .modal-panel{
+  width: 560px;
+  max-width: 92vw;
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  position: relative;
+  animation: fam-pop .18s ease-out;
+}
+
+.foodadd-modal h3{
+  margin: 0 0 10px;
+  font-weight: 800;
+}
+
+/* 한 줄 정렬 */
+.foodadd-modal .modal-row{
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.foodadd-modal .search-input,
+.foodadd-modal .quantity-input{
+  height: 28px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  outline: none;
+}
+.foodadd-modal .search-input{ flex: 1 1 auto; min-width: 0; }
+.foodadd-modal .quantity-input{ width: 90px; flex: 0 0 auto; }
+
+.foodadd-modal .search-input:focus,
+.foodadd-modal .quantity-input:focus{
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14,165,233,.2);
+}
+
+/* Buttons */
+.foodadd-modal .fam-btn{
+  border: none; border-radius: 10px; padding: 12px 14px; font-weight: 700; cursor: pointer;
+}
+.foodadd-modal .fam-btn-primary{ background:#0ea5e9; color:#fff; }
+.foodadd-modal .fam-btn:hover{ filter: brightness(.95); }
+.foodadd-modal .ghost{ background:#eef2f7; color:#111827; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; }
+
+/* Search dropdown */
+.foodadd-modal .search-results-dropdown{
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; margin-top: 6px;
+  max-height: 260px; overflow: auto; box-shadow: 0 8px 20px rgba(0,0,0,.08); z-index: 1001;
+}
+.foodadd-modal .search-result-item{
+  display: grid; grid-template-columns: 1fr repeat(4, auto); gap: 10px; padding: 10px 12px; cursor: pointer;
+}
+.foodadd-modal .search-result-item:hover{ background:#f9fafb; }
+.foodadd-modal .food-name{ font-weight:700; color:#0f172a; }
+
+/* 하단 액션 */
+.foodadd-modal .modal-actions{ display:flex; justify-content:flex-end; margin-top:12px; }
+
+/* Preset grid */
+.foodadd-modal .preset-grid{
+  display:grid; grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:10px; margin-top:12px; max-height:260px; overflow:auto;
+}
+.foodadd-modal .preset-card{
+  text-align:left; background:#fefce8; border:1px solid #e5e7eb; border-radius:12px; padding:12px;
+  cursor:pointer; transition:.15s ease; outline:none;
+}
+.foodadd-modal .preset-card:hover{ border-color:#fbbf24; box-shadow:0 0 0 3px rgba(251,191,36,.15) inset; }
+.foodadd-modal .preset-card.active{ border-color:#16a34a; background:#ecfdf5; box-shadow:0 0 0 2px #16a34a inset; }
+.foodadd-modal .preset-card:focus{ box-shadow:0 0 0 3px rgba(22,163,74,.35); }
+.foodadd-modal .preset-card .title-row{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+.foodadd-modal .preset-card .title{ font-weight:700; color:#111827; }
+.foodadd-modal .preset-card .serving{ font-size:12px; color:#64748b; }
+.foodadd-modal .preset-card .kcal-row{ font-weight:600; color:#111827; margin-bottom:4px; }
+.foodadd-modal .preset-card .macro-row{ display:flex; gap:10px; font-size:12px; color:#475569; }
+
+/* Manual mode: 6컬럼(이름, kcal, P, C, F, 수량) */
+.foodadd-modal .manual-wrap{
+  display:grid !important;
+  grid-template-columns: 1.4fr 0.75fr 0.75fr 0.75fr 0.75fr 0.7fr;
+  gap:8px; align-items:end; margin-top:4px;
+}
+/* 숫자 인풋 폭 살짝 축소 */
+.foodadd-modal .manual-wrap .quantity-input{ width:72px; padding:6px 8px; }
+
+.foodadd-modal .manual-actions{
+  grid-column:1 / -1;
+  display:flex !important; gap:8px; justify-content:flex-end; margin-top:4px;
+}
+.foodadd-modal .manual-actions .fam-btn{ height:36px; padding:0 14px; border-radius:10px; }
+
+/* Animations */
+@keyframes fam-fade{ from{opacity:0} to{opacity:1} }
+@keyframes fam-pop{ from{opacity:0; transform:translateY(6px) scale(.98)} to{opacity:1; transform:translateY(0) scale(1)} }
+
+/* Responsive */
+@media (max-width:480px){
+  .foodadd-modal .modal-row{ flex-wrap:wrap; }
+  .foodadd-modal .quantity-input{ width:100%; }
+  .foodadd-modal .manual-wrap{ grid-template-columns: 1fr 1fr; }
+  .foodadd-modal .manual-actions{ justify-content:stretch; }
+  .foodadd-modal .manual-actions .fam-btn{ flex:1; }
+}
+@media (min-width:560px){
+  .foodadd-modal .preset-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+}

@@ -1,0 +1,79 @@
+.tabs {
+  width: 100%;
+  background: white;
+  
+}
+
+.tabList {
+  display: flex;
+  border-bottom: 2px solid #e9ecef;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 94px; /* admin 헤더 높이만큼 조정 */
+
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #718096;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  flex: 1;
+  text-align: center;
+  outline: none;
+}
+
+.tab:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #2d3748;
+}
+
+.tab.active {
+  color: #3b82f6;
+  background: white;
+  border-bottom-color: #3b82f6;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tab:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: -2px;
+}
+
+.panel {
+  padding: 0;
+  background: white;
+  min-height: 400px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .tab {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .tabList {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    min-width: 80px;
+  }
+}

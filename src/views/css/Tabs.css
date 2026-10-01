@@ -1,0 +1,57 @@
+/* Tabs 컨테이너 */
+.tabs {
+  display: grid;
+  gap: 12px;
+}
+
+/* 탭 버튼 영역 */
+.tabList {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* 탭 버튼 기본 스타일 */
+.tab {
+  appearance: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+
+/* 호버/포커스 */
+.tab:hover,
+.tab:focus-visible {
+  background: #f0fdf4;      /* 연한 초록 톤 */
+  outline: none;
+}
+
+/* 활성 탭 */
+.tab.active {
+  background: #e7f6ee;
+  border-color: #10b98166;
+  color: #065f46;
+  font-weight: 700;
+}
+
+/* 선택된 패널 페이드 인 */
+.panel {
+  animation: fadeIn .18s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: .6; transform: translateY(4px); }
+  to   { opacity: 1;  transform: none; }
+}
+
+/* 모바일 대응 */
+@media (max-width: 640px) {
+  .tabList { width: 100%; }
+  .tab { flex: 1 1 0; text-align: center; }
+}

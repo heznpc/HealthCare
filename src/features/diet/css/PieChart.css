@@ -1,0 +1,92 @@
+.piechart-wrap {
+  max-width: 640px;
+  margin-top: 24px;
+}
+
+/* 요약 박스 */
+.nutrition-summary {
+  background: #f7fbf7;
+  border: 1px solid #e1efe1;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.nutrition-summary h4 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.stat-card {
+  border-radius: 10px;
+  padding: 12px 10px;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+/* 값/라벨 */
+.stat-value {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 색상 테마 (이미지처럼 파스텔) */
+.stat-card.cal {
+  background: #eaf8ee;         /* 연녹 */
+  color: #1f8f4e;
+}
+
+.stat-card.carb {
+  background: #eef5ff;         /* 연블루 */
+  color: #36A2EB;
+}
+
+.stat-card.protein {
+  background: #f1eaff;         /* 연보라 */
+  color: #7c3aed;
+}
+
+.stat-card.fat {
+  background: #fff4ea;         /* 연오렌지 */
+  color: #f97316;
+}
+
+/* 파이 섹션 */
+.section-title {
+  margin: 20px 0 10px;
+}
+
+.detail-numbers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.no-data {
+  margin-top: 12px;
+  color: #6b7280;
+}
+
+/* 모바일 */
+@media (max-width: 480px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

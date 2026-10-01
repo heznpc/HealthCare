@@ -1,0 +1,44 @@
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+.grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  padding: 10px 16px;
+  border-radius: 16px;
+  background: #2563eb;        /* 밝은 파란색 */
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(29,161,242,0.25);
+  transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+}
+
+.pill:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 4px 10px rgba(29,161,242,0.32);
+}
+
+.pill:active {
+  transform: translateY(1px);
+}

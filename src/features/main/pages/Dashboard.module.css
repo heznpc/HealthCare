@@ -1,0 +1,58 @@
+.appWrap{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  background:#f8fafc;
+  min-height:100vh;
+  box-sizing:border-box;
+}
+
+/* 상단 3카드 */
+.topGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:20px;
+}
+
+/* 하단 패널 2열 */
+.bottomGrid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:20px;
+}
+
+/* 카드/패널 공통 */
+.card,
+.panel{
+  background:#fff;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+/* 차트 자리 표시용이 필요한 경우 사용 */
+.chartPlaceholder{
+  border:2px dashed #cbd5e1;
+  border-radius:8px;
+  padding:60px 0;
+  text-align:center;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+/* 목표 알림 오버레이(선택) */
+.fullOverlay{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.35);
+  z-index:60;
+}
+
+/* 반응형 */
+@media (max-width:900px){
+  .bottomGrid{ grid-template-columns:1fr; }
+}
